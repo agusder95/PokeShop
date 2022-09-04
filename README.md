@@ -1,5 +1,5 @@
-# React Template
-React template for Nucba students
+# PokeShop
+Proyecto integrador final Landing page
 
 ## Run
 ```
