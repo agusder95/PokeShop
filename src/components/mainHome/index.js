@@ -1,18 +1,23 @@
 import Button from "../button";
-import { ButtonsContainer, ItemsContainer, MainHomeWrapper } from "./styles";
+import Products from "../products";
+import { ButtonsContainer, ItemContainer, Container, MainHomeWrapper } from "./styles";
 
 function MainHome() {
      return (
           <MainHomeWrapper>
                <ButtonsContainer>
-                    <Button txt={'Pokeballs'} />
-                    <Button txt={'Heals'} />
-                    <Button txt={'Potions'} />
+                    <Button txt={'Pokeballs'} width ={7} height ={3}/>
+                    <Button txt={'Heals'} width ={7} height ={3}/>
+                    <Button txt={'Potions'} width ={7} height ={3}/>
                </ButtonsContainer>
 
-               <ItemsContainer>
-                    <p>Aca van los items</p>
-               </ItemsContainer>
+               <Container>
+                    <Button txt={'<--'} width ={3} height ={2.5}/>
+                    <ItemContainer>
+                         <Products />
+                    </ItemContainer>
+                    <Button txt={'-->'}width ={3} height ={2.5}/>
+               </Container>
           </MainHomeWrapper>
      );
 }

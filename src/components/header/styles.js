@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.header`
   background-color:#87adfd;
   height: 10rem;
   
+  
 
   @media screen and (min-width: 1024px) {
     height: 13rem;

@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
+
 
 export const GlobalStyle = createGlobalStyle`
     body{
@@ -7,8 +8,17 @@ export const GlobalStyle = createGlobalStyle`
         width:100vw;
         height:100vh;
     }
-    h1,h2,h3,p,ul,li{
+    h1,h2,h3,p{
         margin: 0;
         padding: 0;
+    }
+    ul,li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
     }
 `
