@@ -23,15 +23,20 @@ export const ButtonsContainer = styled.div`
   } 
 `;
 
-export const Container = styled.div`
-  width:90%;
-  height:85%;
+export const Carrousel = styled.div`
+  width:100%;
+  height:100%;
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items: center;
-  background-color:white;
+  background-color:#d4e358;
+  @media screen and (min-width: 1024px){
+    margin:1rem;
+    width:70%;
+  } 
 `;
 
 export const ItemContainer = styled.div`
-  
+  width:100%;
+  height:100%;
 `;
