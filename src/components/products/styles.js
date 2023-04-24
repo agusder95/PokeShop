@@ -26,44 +26,51 @@ export const ButtonContainer = styled.div`
 
 `;
 
-export const LI = styled.li`
-  background-color:greenyellow;
-  margin-right:1rem;
-  font-size:15px;
-  width: 12rem;
-  height: 20rem;
-  flex-shrink:0;
+export const CarouselItem = styled.li`
+  flex-shrink: 0;
+  width: calc(100% / ${(props) => props.itemsPerSlide});
+  height: 14rem;
+  box-sizing: border-box;
+  background-color:#fd9e7b;
+  border: 1px solid black;
+
   display: flex;
   justify-content:center;
   align-items:center;
-
-
-  
-  border-right: 2px solid #000000;
 `;
 
-export const UL = styled.ul`
+export const CarouselList = styled.ul`
   height:28rem;
-  max-width:100%;
   display: flex;
-  align-items:center;
-  overflow: auto;
+  transition: transform 0.3s ease-in-out;
+  list-style:none;
+  margin: 0 ;
+  padding: 0;
   background-color:red;
 `;
 
-export const OL = styled.ol`
+export const Card = styled.div`
+  background-color:grey;
   display: flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  width: 13rem;
+  height: 100%;
+  border-radius: 10%;
+
 `;
+
 
 export const ContainerProducts = styled.div`
   min-width:10rem;
   max-width:45rem;
   height:33rem;
+  background-color:#9dbb70;
   display: flex;
   flex-direction:column;
-  align-items: center;
-  justify-content:center;
-  
+  margin: 0 auto;
+  overflow: hidden;
 `;
 
 export const ButtonSlider = styled.button`

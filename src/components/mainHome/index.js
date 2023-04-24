@@ -1,8 +1,24 @@
+import { useState} from "react";
 import Button from "../button";
 import Products from "../products";
 import { ButtonsContainer, ItemContainer, Carrousel, MainHomeWrapper } from "./styles";
+import { PRECIOS } from "../../constants/DataList";
 
 function MainHome() {
+
+     const [width, setWidth] = useState(window.innerWidth)
+  
+
+     const size = () =>{
+          if (width < 450){
+               return 1
+          }else if (width < 700){
+               return 2
+          }else{
+               return 3
+          }
+     }
+
      return (
           <MainHomeWrapper>
                <ButtonsContainer>
@@ -12,7 +28,7 @@ function MainHome() {
                </ButtonsContainer>
 
                <Carrousel>
-                    <Products />
+                    <Products items={PRECIOS} itemsPerSlide={size()} value={"pokeball"}/>
                </Carrousel>
           </MainHomeWrapper>
      );
