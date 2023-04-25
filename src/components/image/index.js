@@ -1,20 +1,22 @@
 import { string } from "prop-types";
 import { ImageWrapper } from "./styles";
 
-function Imagen({src,alt,radius,size}) {
+function Imagen({src,alt,radius,width, height}) {
     return (
-        <ImageWrapper src={src} alt = {alt} radius = {radius} size ={size}/>
+        <ImageWrapper src={src} alt = {alt} radius = {radius} width ={width} height ={height}/>
     );
 }
 
 Imagen.prototype = {
     radius:string,
-    size:string,
+    width:string,
+    height:string,
 }
 
 Imagen.defaultProps ={
     radius: 0,
-    size: 100,
+    height: 100,
+    width: 100,
 }
 
 export default Imagen;

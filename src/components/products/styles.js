@@ -11,66 +11,9 @@ export const ProductsWrapper = styled.div`
   background-color:gray;
 `;
 
-export const ImageWrapper = styled.div`
-  width: 100%;
-  height: 50%;
-  background-color: orange;
-`;
-
-export const P = styled.p`
-  
-`;
-
 export const ButtonContainer = styled.div`
   margin:5px;
 
-`;
-
-export const CarouselItem = styled.li`
-  flex-shrink: 0;
-  width: calc(100% / ${(props) => props.itemsPerSlide});
-  height: 14rem;
-  box-sizing: border-box;
-  background-color:#fd9e7b;
-  border: 1px solid black;
-
-  display: flex;
-  justify-content:center;
-  align-items:center;
-`;
-
-export const CarouselList = styled.ul`
-  height:28rem;
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-  list-style:none;
-  margin: 0 ;
-  padding: 0;
-  background-color:red;
-`;
-
-export const Card = styled.div`
-  background-color:grey;
-  display: flex;
-  flex-direction:column;
-  justify-content:space-around;
-  align-items:center;
-  width: 13rem;
-  height: 100%;
-  border-radius: 10%;
-
-`;
-
-
-export const ContainerProducts = styled.div`
-  min-width:10rem;
-  max-width:45rem;
-  height:33rem;
-  background-color:#9dbb70;
-  display: flex;
-  flex-direction:column;
-  margin: 0 auto;
-  overflow: hidden;
 `;
 
 export const ButtonSlider = styled.button`
@@ -88,5 +31,80 @@ export const ButtonSlider = styled.button`
     height:3rem;
     font-size:20px;
   }
+`;
 
+export const ContainerProducts = styled.div`
+  /* min-width:10rem;
+  max-width:45rem; */
+  height:33rem;
+  background-color:#9dbb70;
+  display: flex;
+  flex-direction:column;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+`;
+
+export const CarouselList = styled.ul`
+  height:100%;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  list-style:none;
+  margin: 0 ;
+  padding: 0;
+  background-color:red;
+`;
+
+export const CarouselItem = styled.li`
+  flex-shrink: 0;
+  width: calc(100% / ${(props) => props.itemsPerSlide});
+  
+  height: 100%;
+  box-sizing: border-box;
+  background-color:#fd9e7b;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content:center;
+  align-items:center;
+`;
+
+export const Card = styled.div`
+  background-color:grey;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  width: 15rem;
+  height: 25rem;
+  border-radius: 10%;
+
+  @media screen and (min-width: 1207px){
+    width: 18rem;
+    height: 25rem;
+  }
+
+`;
+
+export const ImageWrapper = styled.div`
+  width: 80%;
+  height: 50%;
+  background-color: orange;
+  border-radius: 10%;
+`;
+
+export const DataContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+`;
+
+export const P = styled.p`
+  text-align:center;
+  padding:1rem;
+`;
+
+export const BuyButton = styled.button`
+  background-color:red;
+  padding:1rem;
 `;

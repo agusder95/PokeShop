@@ -32,7 +32,7 @@ export const Carrousel = styled.div`
   background-color:#d4e358;
   @media screen and (min-width: 1024px){
     margin:1rem;
-    width:70%;
+    width:90%;
   } 
 `;
 

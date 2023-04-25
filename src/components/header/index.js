@@ -13,7 +13,7 @@ function Header() {
             
             <H1> Pokeshop </H1>
             <CartWrapper >
-                <Imagen src={Shop} alt={'Shop-cart'} size ={50} />
+                <Imagen src={Shop} alt={'Shop-cart'} width ={50} height ={50} />
             </CartWrapper>
         </HeaderWrapper>
     );

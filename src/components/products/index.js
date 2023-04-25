@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
-import { ButtonContainer, ImageWrapper, CarouselItem, OL, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card } from "./styles";
+import React, { useEffect, useState } from 'react';
+import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton } from "./styles";
+import Imagen from '../image';
 
 
 function Products({ items, itemsPerSlide, value }) {
 
      const [currentIndex, setCurrentIndex] = useState(0);
      
+     useEffect(()=>{
+          setCurrentIndex(0);
+     },[value])
+
      const prevSlide = () => {
           setCurrentIndex(
             currentIndex === 0 ? items[value].length - itemsPerSlide : currentIndex - 1
@@ -36,8 +41,15 @@ function Products({ items, itemsPerSlide, value }) {
                                         itemsPerSlide={itemsPerSlide}
                                    >
                                         <Card >
-                                             <p>{item.title}</p>
-                                             <p>{item.id}</p> 
+                                             <ImageWrapper>
+                                                  <Imagen src ={item.image} />
+                                             </ImageWrapper>
+                                             <DataContainer>
+                                                  <P>{item.title}</P>
+                                                  <P>{`Precio: $ ${item.price}`}</P>
+                                                  <BuyButton  >Comprar</BuyButton>
+                                             </DataContainer>
+
                                         </Card>
                                    </CarouselItem>
                               ))
@@ -45,9 +57,8 @@ function Products({ items, itemsPerSlide, value }) {
 
                     </CarouselList>
 
-                    <div>
-                         <p>{`${itemsPerSlide + currentIndex} / ${items[value].length}`}</p>
-                    </div>
+                         <P>{`${itemsPerSlide + currentIndex} / ${items[value].length}`}</P>
+                   
                     
                </ContainerProducts>
 
