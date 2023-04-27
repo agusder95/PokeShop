@@ -30,7 +30,7 @@ export const CartWrapper = styled.div`
      width:5rem;
      display: flex;
      justify-content: center;
-     
+     position:relative;
      background-color: white;
      border-radius: 50%;
      height: 3rem;
@@ -41,6 +41,15 @@ export const CartWrapper = styled.div`
           width:4rem;
           height: 4rem;
      }
+`;
+
+export const PurchaseConfirm = styled.div`
+  display: ${props => props.show ? 'block' : 'none'};
+  width:1.5rem;
+  height:1.5rem;
+  position: absolute;
+  left:0px;
+  bottom:1px;
 `;
 
 export const H1 = styled.h1`

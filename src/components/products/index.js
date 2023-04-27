@@ -1,15 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton } from "./styles";
+import React, { useContext, useEffect, useState } from 'react';
+import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton, CounterContainer, CounterButon } from "./styles";
 import Imagen from '../image';
 
+import PurchaseContext from '../../context/purchase';
+import { current } from '@reduxjs/toolkit';
 
 function Products({ items, itemsPerSlide, value }) {
-
+     
+     
      const [currentIndex, setCurrentIndex] = useState(0);
+
+     const {itemsBuy, setItemsBuy} = useContext(PurchaseContext)
      
      useEffect(()=>{
           setCurrentIndex(0);
      },[value])
+
+     
 
      const prevSlide = () => {
           setCurrentIndex(
@@ -22,6 +29,26 @@ function Products({ items, itemsPerSlide, value }) {
                currentIndex === items[value].length - itemsPerSlide ? 0 : currentIndex + 1
           );
      };
+
+     const buyItems = (id, title, price, stock) => {
+          
+          if(stock > 0){
+               let array = {
+                    "id": id,
+                    "title": title,
+                    "price": price,
+                    "amount": 1
+               }
+     
+               setItemsBuy(current=> [...current, array])
+          }else{
+               alert("Out of stock")
+          }
+
+
+     }
+
+    
 
      return(
           <ProductsWrapper>
@@ -47,10 +74,11 @@ function Products({ items, itemsPerSlide, value }) {
                                              <DataContainer>
                                                   <P>{item.title}</P>
                                                   <P>{`Precio: $ ${item.price}`}</P>
-                                                  <BuyButton  >Comprar</BuyButton>
+                                                  <BuyButton onClick={()=>buyItems(item.id, item.title, item.price, item.stock)} >Comprar</BuyButton>
                                              </DataContainer>
 
                                         </Card>
+                                        
                                    </CarouselItem>
                               ))
                          }
@@ -72,3 +100,4 @@ function Products({ items, itemsPerSlide, value }) {
 }
 
 export default Products;
+

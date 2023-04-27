@@ -4,12 +4,12 @@ const PurchaseContext = createContext({})
 
 export const PurchaseContextProvider = ({children}) =>{
 
-     const[items, setItems] = useState([])
+     const[itemsBuy, setItemsBuy] = useState([])
 
      return (
           <PurchaseContext.Provider value={{
-               items,
-               setItems,
+               itemsBuy,
+               setItemsBuy,
           }}>
                {children}
           </PurchaseContext.Provider>
@@ -17,4 +17,4 @@ export const PurchaseContextProvider = ({children}) =>{
 
 }
 
-export default PurchaseContextProvider;
+export default PurchaseContext;

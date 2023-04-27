@@ -65,7 +65,8 @@ export const CarouselItem = styled.li`
   border: 1px solid black;
 
   display: flex;
-  justify-content:center;
+  flex-direction:column;
+  justify-content:space-around;
   align-items:center;
 `;
 
@@ -107,4 +108,17 @@ export const P = styled.p`
 export const BuyButton = styled.button`
   background-color:red;
   padding:1rem;
+`;
+
+
+export const CounterContainer = styled.div`
+  display:flex;
+  justify-content:center;
+`;
+
+export const CounterButon = styled.button`
+  width:3rem;
+  font-size:2.5rem;
+  border-radius:10%;
+  background-color:#fd9e7b;
 `;

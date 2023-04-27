@@ -6,7 +6,7 @@ import { HomeWrapper } from "./styles";
 function Home() {
      return (
           <HomeWrapper>
-               <Header />
+               <Header direction={"purchase"}/>
                <MainHome />
                <Footer />
           </HomeWrapper>

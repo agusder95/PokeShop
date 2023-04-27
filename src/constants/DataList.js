@@ -20,49 +20,57 @@ export const PRECIOS = {
                 id : 0,
                 image : NormalBall,
                 title: "NormalBall",
-                price: 200
+                price: 200,
+                stock:10
           },
           {
                 id : 1,
                 image : SuperBall,
                 title: "SuperBall",
-                price: 600
+                price: 600,
+                stock:12
            },
           {
                 id : 2,
                 image : UltraBall,
                 title:"UltraBall",
-                price: 1200
+                price: 1200,
+                stock:8
            },
            {
                 id : 3,
                 image : MasterBall,
                 title: "MasterBall",
-                price: 200
+                price: 200,
+                stock:5
            },
            {
                 id : 4,
                 image : NormalBall,
                 title: "NormalBall",
-                price: 200
+                price: 200,
+                stock:23
             },
             {
                 id : 5,
                 image : SuperBall,
                 title: "SuperBall",
-                price: 600
+                price: 600,
+                stock:43
             },
             {
                 id : 6,
                 image : UltraBall,
                 title:"UltraBall",
-                price: 1200
+                price: 1200,
+                stock:55
             },
             {
                 id : 7,
                 image : MasterBall,
                 title:"MasterBall",
-                price: 200
+                price: 200,
+                stock:10
             },
      ],
      "antidote": [
@@ -70,31 +78,36 @@ export const PRECIOS = {
                id : 0,
                image : ParalizeHeal,
                title: "ParalizeHeal",
-               price: 200
+               price: 200,
+               stock:15
            },
            {
                id : 1,
                image : BurnHeal,
                title: "BurnHeal",
-               price: 250
+               price: 250,
+               stock:17
            },
            {
                id : 2,
                image : IceHeal,
                title: "IceHeal",
-               price: 250
+               price: 250,
+               stock:0
            },
            {
                id : 3,
                image : Awakening,
                title: "Awakening",
-               price: 250
+               price: 250,
+               stock:4
            },
            {
                id : 4,
                image : FullHeal,
                title: "FullHeal",
-               price: 600
+               price: 600,
+               stock:6
            },
      ],
      "potions": [
@@ -102,19 +115,22 @@ export const PRECIOS = {
                id : 0,
                image : Potion,
                title: "Potion",
-               price: 300
+               price: 300,
+               stock:15
            },
            {
                id : 1,
                image : SuperPotion,
                title: "SuperPotion",
-               price: 700
+               price: 700,
+               stock:12
            },
            {
                id : 2,
                image : HiperPotion,
                title: "HiperPotion",
-               price: 1200
+               price: 1200,
+               stock:3
            },
      ]
 }

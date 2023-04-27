@@ -1,12 +1,15 @@
+import Footer from "../../components/footer";
 import Header from "../../components/header";
+import MainPurchase from "../../components/mainPurchase";
+import { PurchaseWrapper } from "./styles";
 
 function Purchase() {
      return (
-          <>
-          <Header />
-          
-          <h1>Soon... </h1>
-          </>
+          <PurchaseWrapper>
+               <Header direction ={"/"}/>
+               <MainPurchase />
+               <Footer />
+          </PurchaseWrapper>
      );
 }
 
