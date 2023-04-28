@@ -3,7 +3,6 @@ import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, Carous
 import Imagen from '../image';
 
 import PurchaseContext from '../../context/purchase';
-import { current } from '@reduxjs/toolkit';
 
 function Products({ items, itemsPerSlide, value }) {
      

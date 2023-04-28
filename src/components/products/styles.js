@@ -12,7 +12,7 @@ export const ProductsWrapper = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-  margin:5px;
+  
 
 `;
 
@@ -36,13 +36,18 @@ export const ButtonSlider = styled.button`
 export const ContainerProducts = styled.div`
   /* min-width:10rem;
   max-width:45rem; */
-  height:33rem;
+  height:27rem;
   background-color:#9dbb70;
   display: flex;
   flex-direction:column;
   margin: 0;
   width: 100%;
   overflow: hidden;
+
+  @media screen and (min-width: 500px) {
+    
+    height:33rem;
+  }
 `;
 
 export const CarouselList = styled.ul`
@@ -68,6 +73,7 @@ export const CarouselItem = styled.li`
   flex-direction:column;
   justify-content:space-around;
   align-items:center;
+  
 `;
 
 export const Card = styled.div`
@@ -76,9 +82,16 @@ export const Card = styled.div`
   flex-direction:column;
   justify-content:space-around;
   align-items:center;
-  width: 15rem;
-  height: 25rem;
+  width: 12rem;
+  height: 19rem;
+  padding:1rem 0;
   border-radius: 10%;
+
+  @media screen and (min-width: 500px) {
+    
+    width: 15rem;
+    height: 25rem;
+  }
 
   @media screen and (min-width: 1207px){
     width: 18rem;
@@ -89,9 +102,12 @@ export const Card = styled.div`
 
 export const ImageWrapper = styled.div`
   width: 80%;
-  height: 50%;
+  height: 48%;
   background-color: orange;
   border-radius: 10%;
+  @media screen and (min-width: 1207px){
+    height: 55%;
+  }
 `;
 
 export const DataContainer = styled.div`
@@ -108,6 +124,7 @@ export const P = styled.p`
 export const BuyButton = styled.button`
   background-color:red;
   padding:1rem;
+  border-radius:.5rem;
 `;
 
 

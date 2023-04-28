@@ -18,8 +18,13 @@ export const ButtonsContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin: 1rem;
+
+  @media screen and (min-width: 500px) {
+      width:70%;
+  }
+
   @media screen and (min-width: 1024px){
-    width:70%;
+    width:50%;
   } 
 `;
 

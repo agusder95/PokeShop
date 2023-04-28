@@ -9,8 +9,14 @@ export const ButtonWrapper = styled.button`
     width:${props=> props.width}rem;
     height:${props=> props.height }rem;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: .8rem;
     background-color: ${props=> props.color};
+
+    @media screen and (min-width: 500px){
+        width:${props=> props.width*1.2}rem;
+        height:${props=> props.height*1.2}rem;
+        font-size: 1rem;
+    } 
 
     @media screen and (min-width: 1024px){
         width:${props=> props.width*1.5}rem;

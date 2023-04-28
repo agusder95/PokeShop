@@ -31,17 +31,19 @@ function MainHome() {
                return 1
           }else if (widthSize < 920){
                return 2
-          }else{
+          }else if (widthSize < 1502){
                return 3
+          }else{
+               return 4
           }
      }
 
      return (
           <MainHomeWrapper>
                <ButtonsContainer>
-                    <Button txt={'Pokeballs'} width ={7} height ={3} func={()=>setItem('pokeball')}/>
-                    <Button txt={'Heals'} width ={7} height ={3} func={()=>setItem('antidote')}/>
-                    <Button txt={'Potions'} width ={7} height ={3} func={()=>setItem('potions')}/>
+                    <Button txt={'Pokeballs'} width ={6} height ={3} func={()=>setItem('pokeball')}/>
+                    <Button txt={'Heals'} width ={6} height ={3} func={()=>setItem('antidote')}/>
+                    <Button txt={'Potions'} width ={6} height ={3} func={()=>setItem('potions')}/>
                </ButtonsContainer>
 
                <Carrousel>
