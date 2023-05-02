@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton, CounterContainer, CounterButon } from "./styles";
+import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton} from "./styles";
 import Imagen from '../image';
 
 import PurchaseContext from '../../context/purchase';
@@ -29,17 +29,38 @@ function Products({ items, itemsPerSlide, value }) {
           );
      };
 
-     const buyItems = (id, title, price, stock) => {
-          
-          if(stock > 0){
-               let array = {
-                    "id": id,
-                    "title": title,
-                    "price": price,
-                    "amount": 1
+     const check = (Title) => {
+          let flg = true;
+
+          itemsBuy.map((item)=>{
+               if (item.title === Title){
+                    flg = false;
                }
-     
-               setItemsBuy(current=> [...current, array])
+          })
+
+          return flg
+     }
+
+
+     const buyItems = ( Title, Price, Stock) => {
+          
+
+          if(Stock > 0){
+
+               if (check(Title)){
+
+                    let array = {
+                         stock: Stock,
+                         title: Title,
+                         price: Price,
+                         amount: 1,
+                    }
+
+                    setItemsBuy(current=> [...current, array])
+               }else{
+                    alert('Already Bought')
+               }
+               
           }else{
                alert("Out of stock")
           }
@@ -73,7 +94,7 @@ function Products({ items, itemsPerSlide, value }) {
                                              <DataContainer>
                                                   <P>{item.title}</P>
                                                   <P>{`Precio: $ ${item.price}`}</P>
-                                                  <BuyButton onClick={()=>buyItems(item.id, item.title, item.price, item.stock)} >Comprar</BuyButton>
+                                                  <BuyButton onClick={()=>buyItems( item.title, item.price, item.stock)} >Comprar</BuyButton>
                                              </DataContainer>
 
                                         </Card>

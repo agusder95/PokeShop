@@ -18,3 +18,12 @@ export const PurchaseContextProvider = ({children}) =>{
 }
 
 export default PurchaseContext;
+
+/* 
+     {
+          "id": id,
+          "title": title,
+          "price": price,
+          "amount": 1
+     }
+*/

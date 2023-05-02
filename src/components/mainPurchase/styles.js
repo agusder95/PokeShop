@@ -81,6 +81,24 @@ export const P = styled.p`
   }
 `;
 
+export const InputWrapper = styled.div`
+  width:100%;
+  height:2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border: 1px solid black;
+`;
+
+export const ButonInput = styled.button`
+  height:100%;
+  width:1.5rem;
+`;
+
+/* export const Input = styled.p`
+  
+`; */
+
 export const Input = styled.input`
   width:2rem;
   height:2rem;
