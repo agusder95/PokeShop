@@ -12,7 +12,7 @@ export const MainHomeWrapper = styled.main`
 `;
 
 export const ButtonsContainer = styled.div`
-  display: flex;
+  display: ${props=>props.display > 500 ? "flex" : "none"};
   flex-wrap: wrap;
   width:100%;
   justify-content: space-evenly;
@@ -26,6 +26,22 @@ export const ButtonsContainer = styled.div`
   @media screen and (min-width: 1024px){
     width:50%;
   } 
+`;
+
+export const MobileMenu = styled.div`
+  display: ${props=>props.display <= 500 ? "flex" : "none"};
+`;
+
+export const Label = styled.label`
+  
+`;
+
+export const Select = styled.select`
+  
+`;
+
+export const Option = styled.option`
+  
 `;
 
 export const Carrousel = styled.div`

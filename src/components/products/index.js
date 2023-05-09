@@ -13,19 +13,27 @@ function Products({ items, itemsPerSlide, value }) {
      
      useEffect(()=>{
           setCurrentIndex(0);
+          
      },[value])
 
+     const diffPositive = () =>{
+          if(items[value].length - itemsPerSlide < 0 ){
+               return 0
+          }else{
+               return items[value].length - itemsPerSlide
+          }
+     }
      
 
      const prevSlide = () => {
           setCurrentIndex(
-            currentIndex === 0 ? items[value].length - itemsPerSlide : currentIndex - 1
+            currentIndex === 0 ? diffPositive() : currentIndex - 1
           );
      };
       
      const nextSlide = () => {
           setCurrentIndex(
-               currentIndex === items[value].length - itemsPerSlide ? 0 : currentIndex + 1
+               currentIndex === diffPositive()  ? 0 : currentIndex + 1
           );
      };
 

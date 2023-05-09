@@ -26,13 +26,18 @@ function MainPurchase() {
      },[object])
      
 
-     const changueAmount  = (nro, id) =>{
-          if(nro > 1){
+     const changueAmount  = (nro, id, stock) =>{
+          if(nro >= 1 && nro <= stock){
                setItemsBuy((prev)=>
                     prev.map((item, index)=> (index === id ? {...item, amount: nro}  : item))
                )
-               
+          }else if(nro > stock){
+               alert(`Aviable Stock: ${stock}`)
           }
+     }
+
+     const deleteItem =(id) =>{
+          setItemsBuy(itemsBuy.filter((item, index) => index !== id))
      }
 
      return (
@@ -51,14 +56,14 @@ function MainPurchase() {
 
                          <ItemContainer key={index}>
                               <Container1>
-                                   <Button >X</Button>
+                                   <Button onClick={()=>deleteItem(index)} >X</Button>
                                    <P>{item.title}</P>
                               </Container1>
 
                               <Container2>
                                    
                                    <Input id={index} type="number"  placeholder='1' min={1}  />
-                                   <Button onClick={()=> changueAmount(Number(document.getElementById(index).value), index)} > ok</Button>
+                                   <Button onClick={()=> changueAmount(Number(document.getElementById(index).value), index, item.stock)} > ok</Button>
                                    <P>{`${item.amount}x $${item.price}`}</P>
                                    
                               </Container2>

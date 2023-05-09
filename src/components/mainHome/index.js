@@ -1,7 +1,7 @@
 import { useState, useEffect} from "react";
 import Button from "../button";
 import Products from "../products";
-import { ButtonsContainer, ItemContainer, Carrousel, MainHomeWrapper } from "./styles";
+import { ButtonsContainer, ItemContainer, Carrousel, MainHomeWrapper, MobileMenu, Label, Select, Option } from "./styles";
 import { PRECIOS } from "../../constants/DataList";
 
 function MainHome() {
@@ -12,6 +12,8 @@ function MainHome() {
      /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 
      const [widthSize, setWidthSize] = useState(window.innerWidth);
+     const categories = Object.keys(PRECIOS)
+     const [selected, setSelected] = useState(categories[0])
 
      useEffect(() => {
           const handleWidthResize = () => {
@@ -38,13 +40,42 @@ function MainHome() {
           }
      }
 
+     
+     const itemSelect = () =>{
+          console.log(document.querySelector("#category").value)
+          return document.querySelector("#category").value
+     }
+
+
      return (
           <MainHomeWrapper>
-               <ButtonsContainer>
+               <ButtonsContainer display = {widthSize}>
                     <Button txt={'Pokeballs'} width ={6} height ={3} func={()=>setItem('pokeball')}/>
                     <Button txt={'Heals'} width ={6} height ={3} func={()=>setItem('antidote')}/>
                     <Button txt={'Potions'} width ={6} height ={3} func={()=>setItem('potions')}/>
+                    <Button txt={'Others'} width ={6} height ={3} func={()=>setItem('other')}/>
                </ButtonsContainer>
+
+               <MobileMenu display = {widthSize}>
+                    <Label htmlFor="category" >Categories:  </Label>
+                    <Select
+                         id="category"
+                         name="category"
+                         size="1"
+                         onInput={()=> setItem(itemSelect())}
+                    >
+                         {
+                              categories.map((item, index)=>(
+                                   <Option key={index} value={item}>
+                                        {item}
+                                   </Option>
+                              ))
+                         }
+                    </Select>
+
+
+               </MobileMenu>
+
 
                <Carrousel>
                     <Products items={PRECIOS} itemsPerSlide={size()} value={item}/>
