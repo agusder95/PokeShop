@@ -61,7 +61,7 @@ export const Container2 = styled.div`
   
 `;
 
-export const Button = styled.button`
+export const StateButton = styled.button`
   width:1.5rem;
   height:1.5rem;
   padding:0;
@@ -81,24 +81,6 @@ export const P = styled.p`
   }
 `;
 
-export const InputWrapper = styled.div`
-  width:100%;
-  height:2rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border: 1px solid black;
-`;
-
-export const ButonInput = styled.button`
-  height:100%;
-  width:1.5rem;
-`;
-
-/* export const Input = styled.p`
-  
-`; */
-
 export const Input = styled.input`
   width:2rem;
   height:2rem;
@@ -108,4 +90,16 @@ export const Input = styled.input`
     width:3rem;
     height:2.5rem;
   }
+`;
+
+export const Total = styled.p`
+  font-size:1.5rem;
+`;
+
+export const Div = styled.div`
+  display: flex;
+  align-items:center;
+  justify-content:space-evenly;
+  width: 100%;
+  margin-top:3rem;
 `;

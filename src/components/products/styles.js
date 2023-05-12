@@ -58,6 +58,7 @@ export const CarouselList = styled.ul`
   margin: 0 ;
   padding: 0;
   background-color:red;
+  z-index:0;
 `;
 
 export const CarouselItem = styled.li`

@@ -12,7 +12,7 @@ export const MainHomeWrapper = styled.main`
 `;
 
 export const ButtonsContainer = styled.div`
-  display: ${props=>props.display > 500 ? "flex" : "none"};
+  display: ${props=>props.display > 660 ? "flex" : "none"};
   flex-wrap: wrap;
   width:100%;
   justify-content: space-evenly;
@@ -24,24 +24,37 @@ export const ButtonsContainer = styled.div`
   }
 
   @media screen and (min-width: 1024px){
-    width:50%;
+    /* width:50%; */
+    min-width:${props=>props.elements*10}rem;
+    max-width:${props=>props.elements*15}rem;
   } 
 `;
 
 export const MobileMenu = styled.div`
-  display: ${props=>props.display <= 500 ? "flex" : "none"};
+  display: ${props=>props.display <= 660 ? "flex" : "none"};
+  align-items:center;
+  margin: 2rem 0;
+
 `;
 
 export const Label = styled.label`
-  
+  font-size:1.5rem;
+  margin: 0 .5rem 0 0;
+
+
 `;
 
 export const Select = styled.select`
+  width:7rem;
+  padding: .6rem;
+  font-size:1rem;
+  background-color:transparent;
+  border-radius:10px;
   
 `;
 
 export const Option = styled.option`
-  
+
 `;
 
 export const Carrousel = styled.div`

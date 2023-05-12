@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton} from "./styles";
+import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton, Div} from "./styles";
 import Imagen from '../image';
-
+import ShowElements from "../../context/showElements";
 import PurchaseContext from '../../context/purchase';
 
 function Products({ items, itemsPerSlide, value }) {
@@ -10,6 +10,7 @@ function Products({ items, itemsPerSlide, value }) {
      const [currentIndex, setCurrentIndex] = useState(0);
 
      const {itemsBuy, setItemsBuy} = useContext(PurchaseContext)
+     const {show, setShow} = useContext(ShowElements)
      
      useEffect(()=>{
           setCurrentIndex(0);
@@ -51,7 +52,6 @@ function Products({ items, itemsPerSlide, value }) {
 
 
      const buyItems = ( Title, Price, Stock) => {
-          
 
           if(Stock > 0){
 
@@ -63,19 +63,26 @@ function Products({ items, itemsPerSlide, value }) {
                          price: Price,
                          amount: 1,
                     }
-
                     setItemsBuy(current=> [...current, array])
+               
                }else{
-                    alert('Already Bought')
+                    
+                    setShow({
+                         state:true,
+                         msg:"Already bought",
+                    })
                }
                
           }else{
-               alert("Out of stock")
+               setShow({
+                    state:true,
+                    msg:"Out of stock",
+               })
           }
-
 
      }
 
+     const obj = items[value].length < itemsPerSlide ? 1 :  items[value].length - (itemsPerSlide-1)
     
 
      return(
@@ -106,23 +113,18 @@ function Products({ items, itemsPerSlide, value }) {
                                              </DataContainer>
 
                                         </Card>
-                                        
                                    </CarouselItem>
                               ))
                          }
-
                     </CarouselList>
-
-                         <P>{`${itemsPerSlide + currentIndex} / ${items[value].length}`}</P>
                    
-                    
+                    <P>{`${currentIndex+1} / ${obj}`}</P>
+                   
                </ContainerProducts>
 
                <ButtonContainer>
                     <ButtonSlider onClick={nextSlide}>Next</ButtonSlider> 
                </ButtonContainer>
-
-
           </ProductsWrapper>
      )
 }

@@ -29,7 +29,7 @@ import SSTiket from '../assets/Images/Others/S.S.Ticket.png'
 
 
 export const PRECIOS = {
-    "pokeball": [
+    "Pokeballs": [
         {
             id : 0,
             image : NormalBall,
@@ -87,7 +87,7 @@ export const PRECIOS = {
             stock:10
         },
     ],
-    "antidote": [
+    "Antidotes": [
         {
             id : 0,
             image : ParalizeHeal,
@@ -124,7 +124,7 @@ export const PRECIOS = {
             stock:6
         },
     ],
-    "potions": [
+    "Potions": [
         {
             id : 0,
             image : Potion,
@@ -147,7 +147,7 @@ export const PRECIOS = {
             stock:3
         },
     ],
-    "other": [
+    "Other": [
         {
             id : 0,
             image : Amuleto,
