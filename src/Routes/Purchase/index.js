@@ -10,9 +10,9 @@ function Purchase() {
      const {show, setShow} = useContext(ShowElements)
      return (
           <PurchaseWrapper>
-               <Header direction ={"/"}/>
+               <Header direction ={"/"} isStatic={true}/>
                <MainPurchase />
-               <PopUp  state={show.state} />
+               <PopUp  state={show.state} top={30}/>
                <Footer />
           </PurchaseWrapper>
      );

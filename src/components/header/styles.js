@@ -1,18 +1,25 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  background-color:#87adfd;
-  height: 10rem;
-  
-  
+     overflow: hidden;
+     box-sizing: border-box;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-items: center;
+     background-color:#87adfd;
+    
+     height:${props => props.static ? 9 : props.shrink ? 9 : 15}rem;
+     
+     transition: height 0.4s;
+     transition-delay: .4s;
 
-  @media screen and (min-width: 1024px) {
-    height: 13rem;
-  }
+     /* @media screen and (min-width: 700px) {
+          height: ${props=>props.shrink ? 9 : 22 }rem;
+     } */
 `;
 
 export const LogoWrapper = styled.div`
@@ -21,12 +28,12 @@ export const LogoWrapper = styled.div`
      display: flex;
      justify-content: center;
      border-radius:50%;
-     @media screen and (min-width: 500px) {
+     /* @media screen and (min-width: 500px) {
           width:5rem;
      }
      @media screen and (min-width: 1024px) {
           width:10rem;
-     }
+     } */
 `;
 
 export const CartWrapper = styled.div`

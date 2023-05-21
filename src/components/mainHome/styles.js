@@ -6,8 +6,8 @@ export const MainHomeWrapper = styled.main`
   justify-content: flex-start;
   align-items: center;
   
-  background-color:#ff8c73;
-
+  background-color:#73a08f;
+  position: relative;
   flex-grow:4;
 `;
 
@@ -63,7 +63,7 @@ export const Carrousel = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
-  background-color:#d4e358;
+  /* background-color:#d4e358; */
   @media screen and (min-width: 1024px){
     margin:1rem;
     width:90%;
@@ -74,3 +74,20 @@ export const ItemContainer = styled.div`
   width:100%;
   height:100%;
 `;
+
+export const ImageWrapper = styled.div`
+  
+`;
+
+export const Image = styled.img`
+  width:4rem;
+  height:auto;
+  @media screen and (min-width: 700px){
+    
+    width: 5rem;
+  }
+  @media screen and (min-width: 1000px){
+    width: 6rem;
+  }
+`;
+

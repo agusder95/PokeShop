@@ -1,20 +1,33 @@
+import { useEffect, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { H1, HeaderWrapper, CartWrapper, LogoWrapper, PurchaseConfirm } from "./styles";
 import Logo from "../../assets/Images/pokemon.png"
 import Shop from "../../assets/Images/shopping-cart.png"
 import Imagen from "../image";
 import Compra from "../../assets/Images/footer-logo.png"
-import { useContext } from "react";
 import PurchaseContext from "../../context/purchase";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
-function Header({direction}) {
+function Header({direction, isStatic}) {
+
     
     const {itemsBuy, setItemsBuy} = useContext(PurchaseContext)
-
+    
     const [confirm, setConfirm] = useState(false)
+    const [isScroll, setIsScroll] = useState(false)
+    
 
+    useEffect(()=>{
+        const handleScroll = () => {
+            const shouldShrink = window.scrollY > 1;
+            setIsScroll(shouldShrink)
+        }
+
+        window.addEventListener("scroll", handleScroll)
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    },[])
+    
     useEffect(()=>{
         if (itemsBuy != '') {
             setConfirm(true)
@@ -22,9 +35,10 @@ function Header({direction}) {
             setConfirm(false)
         }
     },[itemsBuy])
+    
 
     return (
-        <HeaderWrapper>
+        <HeaderWrapper shrink={isScroll} static={isStatic} >
             <LogoWrapper >
                 <Imagen src={Logo} alt={'Logo'}/> 
             </LogoWrapper>

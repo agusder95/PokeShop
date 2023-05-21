@@ -8,7 +8,7 @@ export const ProductsWrapper = styled.div`
   width: 95%;
   height: 100%;
 
-  background-color:gray;
+  /* background-color:gray; */
 `;
 
 export const ButtonContainer = styled.div`
@@ -37,7 +37,7 @@ export const ContainerProducts = styled.div`
   /* min-width:10rem;
   max-width:45rem; */
   height:27rem;
-  background-color:#9dbb70;
+  /* background-color:#9dbb70; */
   display: flex;
   flex-direction:column;
   margin: 0;
@@ -57,7 +57,7 @@ export const CarouselList = styled.ul`
   list-style:none;
   margin: 0 ;
   padding: 0;
-  background-color:red;
+  /* background-color:red; */
   z-index:0;
 `;
 
@@ -67,8 +67,8 @@ export const CarouselItem = styled.li`
   
   height: 100%;
   box-sizing: border-box;
-  background-color:#fd9e7b;
-  border: 1px solid black;
+  /* background-color:#fd9e7b; */
+  /* border: 1px solid black; */
 
   display: flex;
   flex-direction:column;

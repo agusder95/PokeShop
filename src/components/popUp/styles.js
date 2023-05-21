@@ -7,12 +7,21 @@ export const PopUpWrapper = styled.div`
      align-items:center;
      border:1px solid black;
      background-color:white;
-     width:20rem;
+     
+     width:55%;
      height:20rem;
+     
      position:absolute;
      border-radius:10px;
-     top:40%;
-     left:38%;
+     top:${props => props.top}%;
+     left:23%;
+     z-index:99;
+
+     @media screen and (min-width: 890px){
+      width:35%;
+      left:32%;
+      /* top:${props => props.top -10}%; */
+     }
 `;
 
 export const P = styled.p`

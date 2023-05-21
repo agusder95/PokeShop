@@ -1,14 +1,19 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect, useContext} from "react";
 import Button from "../button";
 import Products from "../products";
-import { ButtonsContainer, ItemContainer, Carrousel, MainHomeWrapper, MobileMenu, Label, Select, Option } from "./styles";
+import { ButtonsContainer, ItemContainer, Carrousel, MainHomeWrapper, MobileMenu, Label, Select, Option, ImageWrapper, Image } from "./styles";
 import {PRECIOS} from '../../constants/DataList'
+import ShowElements from "../../context/showElements";
+import PopUp from "../popUp";
+import Bulbasaur from "../../assets/Images/Body/bulbasaur.png"
 
 function MainHome() {
 
      /* const [width, setWidth] = useState(window.innerWidth) */
      
      /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+
+     const {show, setShow} = useContext(ShowElements)
      
      const [widthSize, setWidthSize] = useState(window.innerWidth);
      const categories = Object.keys(PRECIOS)
@@ -85,6 +90,11 @@ function MainHome() {
                <Carrousel>
                     <Products items={PRECIOS} itemsPerSlide={size()} value={item}/>
                </Carrousel>
+               
+               <ImageWrapper>
+                    <Image src={Bulbasaur} alt = {'Bulbasaur'}  />
+               </ImageWrapper>
+               <PopUp state={show.state} top={25}/>
           </MainHomeWrapper>
      );
 }
