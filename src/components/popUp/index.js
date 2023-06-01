@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Button, P, PopUpWrapper } from "./styles";
+import { Button, P, PopUpWrapper, TxtContainer } from "./styles";
 import ShowElements from "../../context/showElements";
 
 function PopUp({top}) {
@@ -8,7 +8,11 @@ function PopUp({top}) {
 
      return (
           <PopUpWrapper state={show.state} top={top}>
-               <P>{show.msg}</P>
+               <TxtContainer>
+                    <P>{show.msg}</P>
+                    <P>{show.msgAmount}</P>
+               </TxtContainer>
+               
                <Button onClick={()=>setShow(false)}>OK</Button>
           </PopUpWrapper>
      );

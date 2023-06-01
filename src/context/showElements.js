@@ -7,6 +7,7 @@ export const ShowElementsProvider = ({children}) =>{
      const[show, setShow] = useState({
           state:false,
           msg:"",
+          msgAmount:'',
      })
      return (
           <ShowElements.Provider value={{

@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { Colors } from '../../constants/PaletColors';
 
 export const HeaderWrapper = styled.header`
+     box-shadow: 1px 6px 21px -1px rgba(0,0,0,0.76);
+     -webkit-box-shadow: 1px 6px 21px -1px rgba(0,0,0,0.76);
+     -moz-box-shadow: 1px 6px 21px -1px rgba(0,0,0,0.76);
+
      overflow: hidden;
      box-sizing: border-box;
      position: sticky;
@@ -10,16 +15,12 @@ export const HeaderWrapper = styled.header`
      flex-wrap: wrap;
      justify-content: space-around;
      align-items: center;
-     background-color:#87adfd;
+     background-color:${Colors.BkHeader};
     
      height:${props => props.static ? 9 : props.shrink ? 9 : 15}rem;
      
      transition: height 0.4s;
      transition-delay: .4s;
-
-     /* @media screen and (min-width: 700px) {
-          height: ${props=>props.shrink ? 9 : 22 }rem;
-     } */
 `;
 
 export const LogoWrapper = styled.div`
@@ -28,12 +29,7 @@ export const LogoWrapper = styled.div`
      display: flex;
      justify-content: center;
      border-radius:50%;
-     /* @media screen and (min-width: 500px) {
-          width:5rem;
-     }
-     @media screen and (min-width: 1024px) {
-          width:10rem;
-     } */
+     flex-grow:0;
 `;
 
 export const CartWrapper = styled.div`
@@ -46,6 +42,7 @@ export const CartWrapper = styled.div`
      height: 2.5rem;
      width: 2.5rem;
      align-items: center;
+     flex-grow:0;
 
      @media screen and (min-width: 500px) {
           width:3rem;
@@ -79,13 +76,14 @@ export const H1 = styled.h1`
      font-size: 2.5rem;
      color: #ffcc00;
      -webkit-text-stroke: 3px #0f417d;
-     margin-right: 1rem;
+     
+     flex-grow:0;
      @media screen and (min-width: 500px) {
           font-size:4rem;
      }
 
      @media screen and (min-width: 1024px) {
-          margin-right:5rem;
+          
           font-size: 4rem;
      }
 

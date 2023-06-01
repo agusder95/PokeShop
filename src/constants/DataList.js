@@ -58,7 +58,7 @@ export const PRECIOS = {
             price: 200,
             stock:5
         },
-        {
+        /* {
             id : 4,
             image : NormalBall,
             title: "NormalBall",
@@ -85,7 +85,7 @@ export const PRECIOS = {
             title:"MasterBall",
             price: 200,
             stock:10
-        },
+        }, */
     ],
     "Antidotes": [
         {

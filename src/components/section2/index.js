@@ -1,15 +1,24 @@
-import { Image, ImageWrapper, MarginMax, P, Section2Wrapper } from "./styles";
+import { ContainerImage, ContainerText, Image, ImageWrapper, MarginMax, P, Section2Wrapper } from "./styles";
 
-import Articuno from "../../assets/Images/Body/articuno.png"
 
-function Section2() {
+import Imagen from "../image";
+
+function Section2({image, text, colorBk, orientation}) {
      return (
-          <Section2Wrapper>
-               <MarginMax>
-                    <ImageWrapper>
-                         <Image src={Articuno} alt="Articuno.png" />
-                    </ImageWrapper>
-                    <P>an articuno for lucky</P>
+          <Section2Wrapper colorBk = {colorBk}>
+               <MarginMax orientation = {orientation}>
+                    <ContainerImage>
+                         <ImageWrapper>
+                              <Imagen src={image} alt={image} height={100} width={100}/>
+                         </ImageWrapper>
+                         
+                        
+                    </ContainerImage>
+                    
+                    <ContainerText>
+                         
+                         <P>{text}</P>
+                    </ContainerText>
                </MarginMax>
           </Section2Wrapper>
      );

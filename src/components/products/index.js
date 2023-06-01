@@ -1,8 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton, Div} from "./styles";
+import { ButtonContainer, ImageWrapper, CarouselItem, P, ProductsWrapper, CarouselList, ContainerProducts, ButtonSlider, Card, DataContainer, BuyButton} from "./styles";
 import Imagen from '../image';
 import ShowElements from "../../context/showElements";
 import PurchaseContext from '../../context/purchase';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 function Products({ items, itemsPerSlide, value }) {
      
@@ -87,9 +93,9 @@ function Products({ items, itemsPerSlide, value }) {
 
      return(
           <ProductsWrapper>
-               
+              
                <ButtonContainer>
-                    <ButtonSlider onClick={prevSlide}>Prev</ButtonSlider>     
+                    <ButtonSlider onClick={prevSlide}><FontAwesomeIcon icon={faCircleArrowLeft} size={"lg"} /></ButtonSlider>     
                </ButtonContainer>
 
                <ContainerProducts>
@@ -109,7 +115,7 @@ function Products({ items, itemsPerSlide, value }) {
                                              <DataContainer>
                                                   <P>{item.title}</P>
                                                   <P>{`Precio: $ ${item.price}`}</P>
-                                                  <BuyButton onClick={()=>buyItems( item.title, item.price, item.stock)} >Comprar</BuyButton>
+                                                  <BuyButton onClick={()=>buyItems( item.title, item.price, item.stock)} >Buy Now</BuyButton>
                                              </DataContainer>
 
                                         </Card>
@@ -123,7 +129,7 @@ function Products({ items, itemsPerSlide, value }) {
                </ContainerProducts>
 
                <ButtonContainer>
-                    <ButtonSlider onClick={nextSlide}>Next</ButtonSlider> 
+                    <ButtonSlider onClick={nextSlide}><FontAwesomeIcon icon={faCircleArrowRight} size={"lg"} /></ButtonSlider> 
                </ButtonContainer>
           </ProductsWrapper>
      )

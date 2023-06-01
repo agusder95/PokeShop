@@ -1,12 +1,14 @@
 import styled from 'styled-components';
+import { Colors } from '../../constants/PaletColors';
+
 
 export const FooterWrapper = styled.footer`
   display: flex;
   
   align-items: center;
-  background-color:#99cf77;
+  background-color:${Colors.BkFooter};
   height:4rem;
-  color:#878787;
+  color:${Colors.FooterFont};
   justify-content:space-between;
   @media screen and (min-width: 1024px){
     height:5rem;
@@ -16,17 +18,21 @@ export const FooterWrapper = styled.footer`
 `;
 
 export const ImageContainer = styled.div`
+  height:2rem;
   width:2rem;
+  display: flex;
+  align-items: center;
   @media screen and (min-width: 1024px){
     width:3rem;
+    height:3rem;
   }
 `;
 
 export const P = styled.p`
   text-align:center;
-  font-size:15px;
+  font-size:${props=>props.menu === true ? 10 : 9}px;
   @media screen and (min-width: 1024px){
-    font-size:18px;    
+    font-size:${props=>props.menu === true ? 15 : 11}px;    
   }
 `;
 
@@ -50,6 +56,7 @@ export const A = styled.a`
 `;
 
 export const Div1 = styled.div`
+  height:100%;
   display:flex;
   justify-content:center;
   align-items:center;

@@ -20,4 +20,28 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+    p{
+        font-size:15px;
+        font-family:'Open Sans', sans-serif;
+        font-weight:400;
+        @media screen and (min-width: 820px){
+            font-size:20px;
+        }
+    }
+    button{
+        font-family:'Open Sans', sans-serif;
+        font-weight:400;
+    }
+    h1{
+        font-family:'Open Sans', sans-serif;
+        font-weight:400;
+    }
+    h2{
+        font-family:'Open Sans', sans-serif;
+        font-weight:400;
+    }
+    h3{
+        font-family:'Open Sans', sans-serif;
+        font-weight:400;
+    }
 `

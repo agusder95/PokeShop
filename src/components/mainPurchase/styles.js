@@ -5,6 +5,11 @@ export const MainWrapper = styled.div`
   width:100%;
   max-width:900px;
   margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
 `;
 
 export const H1 = styled.h1`
@@ -16,7 +21,7 @@ export const ItemContainer = styled.div`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  width:auto;
+  width:100%;
   height:3rem;
   border: 1px solid black;
   @media screen and (min-width: 900px){
@@ -28,7 +33,7 @@ export const Description = styled.div`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  width:auto;
+  width:100%;
   height:3rem;
 `;
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Colors } from '../../constants/PaletColors';
 
 export const MainHomeWrapper = styled.main`
   display: flex;
@@ -6,7 +7,7 @@ export const MainHomeWrapper = styled.main`
   justify-content: flex-start;
   align-items: center;
   
-  background-color:#73a08f;
+  background-color:${Colors.BkMainHome}; //
   position: relative;
   flex-grow:4;
 `;
@@ -24,7 +25,6 @@ export const ButtonsContainer = styled.div`
   }
 
   @media screen and (min-width: 1024px){
-    /* width:50%; */
     min-width:${props=>props.elements*10}rem;
     max-width:${props=>props.elements*15}rem;
   } 
@@ -48,7 +48,7 @@ export const Select = styled.select`
   width:7rem;
   padding: .6rem;
   font-size:1rem;
-  background-color:transparent;
+  background-color:${Colors.ButtonMainHomePrimary};
   border-radius:10px;
   
 `;
@@ -63,7 +63,6 @@ export const Carrousel = styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
-  /* background-color:#d4e358; */
   @media screen and (min-width: 1024px){
     margin:1rem;
     width:90%;
@@ -91,3 +90,17 @@ export const Image = styled.img`
   }
 `;
 
+export const H2 = styled.h2`
+
+  @media screen and (max-width: 660px){
+    
+    display:none;
+  }
+
+  @media screen and (min-width: 900px){
+    padding-top:1rem;
+    display:inline-block;
+    font-size:30px;
+  }
+
+`;

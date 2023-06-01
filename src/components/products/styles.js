@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Colors } from '../../constants/PaletColors';
 
 export const ProductsWrapper = styled.div`
   display: flex;
@@ -8,36 +9,29 @@ export const ProductsWrapper = styled.div`
   width: 95%;
   height: 100%;
 
-  /* background-color:gray; */
 `;
 
 export const ButtonContainer = styled.div`
-  
-
 `;
 
 export const ButtonSlider = styled.button`
-  width: 3rem;
-  height:2.5rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:white;
-  border-radius: 8px;
-  font-size:15px;
+  background-color:${Colors.ButtonMainHomePrimary};
+  border-radius:4rem;
+  padding:0;
+  font-size:25px;
+  border:none;
 
   @media screen and (min-width: 1024px){
-    width: 3.5rem;
-    height:3rem;
-    font-size:20px;
+    font-size:35px;
   }
 `;
 
 export const ContainerProducts = styled.div`
-  /* min-width:10rem;
-  max-width:45rem; */
   height:27rem;
-  /* background-color:#9dbb70; */
   display: flex;
   flex-direction:column;
   margin: 0;
@@ -57,7 +51,6 @@ export const CarouselList = styled.ul`
   list-style:none;
   margin: 0 ;
   padding: 0;
-  /* background-color:red; */
   z-index:0;
 `;
 
@@ -67,8 +60,6 @@ export const CarouselItem = styled.li`
   
   height: 100%;
   box-sizing: border-box;
-  /* background-color:#fd9e7b; */
-  /* border: 1px solid black; */
 
   display: flex;
   flex-direction:column;
@@ -78,7 +69,10 @@ export const CarouselItem = styled.li`
 `;
 
 export const Card = styled.div`
-  background-color:grey;
+background: ${Colors.CardPrimary};
+background: linear-gradient(225deg,${Colors.CardPrimary} 10%, ${Colors.CardSeconseary} 90%);
+background: -webkit-linear-gradient(225deg,${Colors.CardPrimary} 10%, ${Colors.CardSeconseary} 90%);
+background: -moz-linear-gradient(225deg,${Colors.CardPrimary} 10%, ${Colors.CardSeconseary} 90%);
   display: flex;
   flex-direction:column;
   justify-content:space-around;
@@ -104,7 +98,7 @@ export const Card = styled.div`
 export const ImageWrapper = styled.div`
   width: 80%;
   height: 48%;
-  background-color: orange;
+  background-color: ${Colors.CardImageBk};
   border-radius: 10%;
   @media screen and (min-width: 1207px){
     height: 55%;
@@ -123,20 +117,18 @@ export const P = styled.p`
 `;
 
 export const BuyButton = styled.button`
-  background-color:red;
+  background-color:${Colors.ButtonPurchasePrimary};
   padding:1rem;
   border-radius:.5rem;
+  border:none;
+
+  &:active{
+    background-color:${Colors.ButtonPurchaseSecondary};
+  }
 `;
 
 
 export const CounterContainer = styled.div`
   display:flex;
   justify-content:center;
-`;
-
-export const CounterButon = styled.button`
-  width:3rem;
-  font-size:2.5rem;
-  border-radius:10%;
-  background-color:#fd9e7b;
 `;

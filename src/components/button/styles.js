@@ -4,12 +4,20 @@ export const ButtonWrapper = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none;
+    
+    background-color:${props=>props.colorPrimary};
+    border: 2px solid ${props=> props.colorSecondary};
     width:${props=> props.width}rem;
     height:${props=> props.height }rem;
     border-radius: 8px;
     font-size: .8rem;
-    background-color: ${props=> props.color};
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+    &:active{
+        transition-duration: 0.1s;
+        background-color:${props=> props.colorSecondary};
+    }
 
     @media screen and (min-width: 500px){
         width:${props=> props.width*1.2}rem;

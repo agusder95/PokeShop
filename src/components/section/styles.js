@@ -1,29 +1,15 @@
 import styled from "styled-components";
 
 export const SectionWrapper = styled.div`
-  /* width: 100%;
-  box-sizing: border-box;
-  height: ${props=>props.heigth}rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction:${props=>props.flip ? 'row-reverse' : '' };
-  background-color: ${props=>props.color}; */
   width: 100%;
   background-color: ${props=>props.color};
   height:auto;
 
-  @media screen and (min-width: 900px){
+  @media screen and (min-width: 1000px){
     height: ${props=>props.heigth ? `${props.heigth}rem` : 'auto'};
 
   }
-  /*  box-sizing: border-box;
-  height: auto;
-  display: flex;
-  flex-direction:column;
   
-  @media screen and (min-width: 700px) {
-    flex-direction:${props=>props.flip ? 'row-reverse' : 'row' };
-  } */
 `;
 
 export const MarginMax = styled.div`
@@ -36,7 +22,7 @@ export const MarginMax = styled.div`
   width: 100%;
   height: 100%;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 1000px) {
     flex-direction:${props=>props.flip ? 'row-reverse' : 'row' };
   }
 
@@ -48,12 +34,14 @@ export const SectionImage = styled.div`
   padding: 1rem;
   width: ${props=>props.double ? '50%' : 'auto'};
   margin: 0 auto;
-  @media screen and (min-width: 700px){
+  align-items:${props=>props.flip ? "flex-end" : "flex-start"};
+  @media screen and (min-width: 900px){
+    /* width: ${props=>props.double ? 45 : 50}%; */
     
-    width: ${props=>props.double ? 45 : 100}%;
   }
   @media screen and (min-width: 1000px){
-    width: ${props=>props.double ? 25 : 100}%;
+    /* width: ${props=>props.double ? 25 : 40}%; */
+    width: auto;
   }
 `;
 
@@ -62,12 +50,11 @@ export const ImageWrapper = styled.div`
   height: ${props=>props.double ? 50 : 100}%;
   width:auto;
   height: 100%;
-  margin: auto;
+  /* margin: auto; */
+  max-width: 700px;
   &:last-child{
     display:${props=>props.double ? '' : 'none'};
   }
-  /* align-self: ${(props) => (props.flip === true ? "flex-start" :"flex-end")}; */
-  
 `;
 
 export const ImageFootWrapper = styled.div`
@@ -91,7 +78,8 @@ export const Image = styled.img`
 `;
 
 export const Div = styled.div`
-  width: 100%;
+  /* width: 100%; */
+  flex-grow:1;
   height:auto;
   display: flex;
   flex-direction: column;
@@ -105,11 +93,6 @@ export const Div2 = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  /* height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content:center; */
-  /* justify-content:${props=>!props.flip ? 'flex-end' :'flex-start' }; */
 `;
 
 export const P = styled.p`

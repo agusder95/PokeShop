@@ -4,6 +4,8 @@ import { useState } from 'react';
 import PurchaseContext from '../../context/purchase';
 import ShowElements from '../../context/showElements';
 import Button from '../button';
+import PopUp from '../popUp';
+import { Colors } from '../../constants/PaletColors';
 
 function MainPurchase() {
 
@@ -48,7 +50,8 @@ function MainPurchase() {
           if(total > 0) {
                setShow({
                     state:true,
-                    msg:`Thanks for your purchase :D. The total is: $${total}`,
+                    msg:`Thanks for your purchase :D`,
+                    msgAmount: `The total is: $${total}`
                })
                setItemsBuy((prevState)=> prevState.filter((element)=>typeof element !== "object")) 
           }
@@ -57,11 +60,11 @@ function MainPurchase() {
      return (
           <MainWrapper>
 
-               <H1>Finalizar Compra</H1>
+               <H1>Finalize Purchase</H1>
                <Description>
-                    <H3>Compra</H3>
+                    <H3>Item</H3>
                     <Description2>
-                         <H3>Cantidad</H3>
+                         <H3>Amount</H3>
                          <H3>Subtotal</H3>
                     </Description2>
                </Description>
@@ -87,10 +90,11 @@ function MainPurchase() {
                }
                <Div>
                     <Total>{`Total: $${total}`}</Total>
-                    <Button txt={'Comparar'} func={()=>endPurchase()} height={3} width={7}/>
+                    <Button txt={'Buy'} func={()=>endPurchase()} height={3} width={7} colorPrimary={Colors.ButtonPurchasePrimary} colorSecondary={Colors.ButtonPurchaseSecondary}/>
                </Div>
-
+               <PopUp state={show.state} top={18}/>
           </MainWrapper>
      );
 }
 export default MainPurchase;
+

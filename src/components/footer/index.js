@@ -8,24 +8,24 @@ function Footer() {
           <FooterWrapper>
                <Div1>
                     <ImageContainer>
-                         <Imagen src={Logo} alt = {'footer-logo.png'}  />
+                         <Imagen src={Logo} alt = {'footer-logo.png'} width={100} />
                     </ImageContainer>
                     <Div2>
 
-                         <P>Developed by:</P>
+                         <P menu={true}>Developed by</P>
                          <UL>
-                              <LI>De Robles Agustin</LI>
-                              <LI><A href="https://github.com/agusder95" >GitHub</A></LI>
-                              <LI><A href="https://www.linkedin.com/in/agustin-de-robles-62a965214/">Linkedin</A></LI>
+                              <LI><P>De Robles Agustin</P></LI>
+                              <LI><A href="https://github.com/agusder95" target={"_blank"}><P>GitHub</P></A></LI>
+                              <LI><A href="https://www.linkedin.com/in/agustin-de-robles-62a965214/" target={"_blank"}><P>Linkedin</P></A></LI>
                          </UL>
                     </Div2>
                
                </Div1>
                <Div2>
-                    <P>Contacto</P>
+                    <P menu={true}>Contact</P>
                     <UL>
-                         <LI><A href="" >abcdef@mail.com</A></LI>
-                         <LI>Telefono: 9353095848</LI>
+                         <LI><A href="" target="_blank" ><P>abcdef@mail.com</P></A></LI>
+                         <LI><P>Telephone: 9353095848</P></LI>
                     </UL>
                
                </Div2>
