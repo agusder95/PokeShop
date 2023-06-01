@@ -1,6 +1,8 @@
 # PokeShop
 Proyecto integrador final Landing page
 
+Link Vercel: https://poke-shop-teal.vercel.app/
+
 ## Run
 ```
     npm install
