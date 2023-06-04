@@ -75,7 +75,7 @@ function Products({ items, itemsPerSlide, value }) {
                     
                     setShow({
                          state:true,
-                         msg:"Already bought",
+                         msg:"Already in cart",
                     })
                }
                
