@@ -30,7 +30,9 @@ function Home() {
                     IMG1={Banner}
                     IMG3={SubPika}
                     HEIGTH={30}
+
                     TXT={"In Pokeshop you will find everything you need to begin your journey and catch them all "}
+
                     COLOR ={Colors.BkSectionPk}
                     FLIP={false}
                     TOP={17}
@@ -40,7 +42,9 @@ function Home() {
                     IMG1={Tipos}
                     IMG3={Gengar}
                     HEIGTH={23}
+
                     TXT={"Fire, water or fighting type? It doesn't matter, whatever you are looking for is just a few clicks away"}
+
                     COLOR={Colors.BkSectionGe}
                     FLIP={true}
                />
@@ -57,7 +61,9 @@ function Home() {
                />
                <Section2 
                     image={Articuno} 
+
                     text={'Have an articuno for good luck!'}
+
                     colorBk={Colors.BkSectionAr}
                     orientation={'vertical'}
                />

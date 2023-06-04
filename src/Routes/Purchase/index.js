@@ -17,6 +17,7 @@ function Purchase() {
                <Section2 
                     image={Dragonite} 
                     text={'We work with dragons! Which is to say, packages are delivered worldwide, on the same day!!!'}
+
                     colorBk={Colors.BkSectionDr}
                     orientation={'horizontal'}
                />

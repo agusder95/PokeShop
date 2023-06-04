@@ -1,5 +1,7 @@
-# React Template
-React template for Nucba students
+# PokeShop
+Proyecto integrador final Landing page
+
+Link Vercel: https://poke-shop-teal.vercel.app/
 
 ## Run
 ```
@@ -25,4 +27,5 @@ Starts on `http://localhost:3000`
 * Styled Components
 * Node sass
 * Axios
+* Material UI
 * Redux
