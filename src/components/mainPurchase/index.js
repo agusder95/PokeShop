@@ -37,7 +37,7 @@ function MainPurchase() {
           }else if(nro > stock){
                setShow({
                     state:true,
-                    msg:`Aviable Stock: ${stock}`,
+                    msg:`In Stock: ${stock}`,
                })
           }
      }
@@ -60,7 +60,7 @@ function MainPurchase() {
      return (
           <MainWrapper>
 
-               <H1>Finalize Purchase</H1>
+               <H1>Check Out</H1>
                <Description>
                     <H3>Item</H3>
                     <Description2>
