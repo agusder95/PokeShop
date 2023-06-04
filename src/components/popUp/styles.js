@@ -21,7 +21,7 @@ export const PopUpWrapper = styled.div`
   border-radius:10px;
   top:${props => props.top}%;
   z-index:99;
-
+  text-align:center;
 `;
 
 export const P = styled.p`

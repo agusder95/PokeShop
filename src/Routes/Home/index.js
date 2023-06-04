@@ -30,7 +30,7 @@ function Home() {
                     IMG1={Banner}
                     IMG3={SubPika}
                     HEIGTH={30}
-                    TXT={"In pokeshop we have everything you need for you to start your journey and catch them all"}
+                    TXT={"In Pokeshop you will find everything you need to begin your journey and catch them all "}
                     COLOR ={Colors.BkSectionPk}
                     FLIP={false}
                     TOP={17}
@@ -40,7 +40,7 @@ function Home() {
                     IMG1={Tipos}
                     IMG3={Gengar}
                     HEIGTH={23}
-                    TXT={"Fire, water or fighting type? It doesn't matter, here you will find the supplies you are looking for. And with just a couple of clicks!!!"}
+                    TXT={"Fire, water or fighting type? It doesn't matter, whatever you are looking for is just a few clicks away"}
                     COLOR={Colors.BkSectionGe}
                     FLIP={true}
                />
@@ -51,13 +51,13 @@ function Home() {
                     IMG1={PewterCity}
                     IMG2={Shop1}
                     IMG3={Squirtle}
-                    TXT={"In pokeshop we have everything you need for you to start your journey and catch them all"}
+                    TXT={"Buy online, or come to visit us in our completly renovated store located in Pewter-City"}
                     COLOR ={Colors.BkSectionPC}
                     FLIP={false}
                />
                <Section2 
                     image={Articuno} 
-                    text={'An articuno for lucky'}
+                    text={'Have an articuno for good luck!'}
                     colorBk={Colors.BkSectionAr}
                     orientation={'vertical'}
                />

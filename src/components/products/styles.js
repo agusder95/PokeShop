@@ -114,6 +114,9 @@ export const DataContainer = styled.div`
 export const P = styled.p`
   text-align:center;
   padding:1rem;
+  &:nth-child(2){
+    padding:0 0 1rem;
+  }
 `;
 
 export const BuyButton = styled.button`

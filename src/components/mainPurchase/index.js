@@ -37,7 +37,7 @@ function MainPurchase() {
           }else if(nro > stock){
                setShow({
                     state:true,
-                    msg:`Aviable Stock: ${stock}`,
+                    msg:`In Stock: ${stock}`,
                })
           }
      }
@@ -50,8 +50,8 @@ function MainPurchase() {
           if(total > 0) {
                setShow({
                     state:true,
-                    msg:`Thanks for your purchase :D`,
-                    msgAmount: `The total is: $${total}`
+                    msg:`Thank you for choosing PokeShop`,
+                    msgAmount: `Your bag total is: $${total}`
                })
                setItemsBuy((prevState)=> prevState.filter((element)=>typeof element !== "object")) 
           }
@@ -60,7 +60,7 @@ function MainPurchase() {
      return (
           <MainWrapper>
 
-               <H1>Finalize Purchase</H1>
+               <H1>Check Out</H1>
                <Description>
                     <H3>Item</H3>
                     <Description2>

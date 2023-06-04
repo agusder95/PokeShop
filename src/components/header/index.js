@@ -1,11 +1,13 @@
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { H1, HeaderWrapper, CartWrapper, LogoWrapper, PurchaseConfirm } from "./styles";
-import Logo from "../../assets/Images/pokemon.png"
+import {  HeaderWrapper, CartWrapper, PokeballWrapper, PurchaseConfirm, LogoWrapper } from "./styles";
+import Pokeball from "../../assets/Images/pokemon.png"
 import Shop from "../../assets/Images/shopping-cart.png"
 import Imagen from "../image";
 import Compra from "../../assets/Images/footer-logo.png"
+import Logo from "../../assets/Images/Logo.png"
 import PurchaseContext from "../../context/purchase";
+
 
 function Header({direction, isStatic}) {
 
@@ -39,11 +41,13 @@ function Header({direction, isStatic}) {
 
     return (
         <HeaderWrapper shrink={isScroll} static={isStatic} >
-            <LogoWrapper >
-                <Imagen src={Logo} alt={'Logo'}/> 
+            <PokeballWrapper >
+                <Imagen src={Pokeball} alt={'Pokeball'}/> 
+            </PokeballWrapper>
+
+            <LogoWrapper>
+                 <Imagen src={Logo} alt={'Logo'}/>
             </LogoWrapper>
-            
-            <H1> Pokeshop </H1>
             
             <Link to={direction}>
                 <CartWrapper >

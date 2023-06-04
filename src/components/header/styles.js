@@ -17,19 +17,33 @@ export const HeaderWrapper = styled.header`
      align-items: center;
      background-color:${Colors.BkHeader};
     
-     height:${props => props.static ? 9 : props.shrink ? 9 : 15}rem;
+     height:${props => props.static ? 7 : props.shrink ? 9 : 15}rem;
      
      transition: height 0.4s;
      transition-delay: .4s;
 `;
 
 export const LogoWrapper = styled.div`
-     width:4rem;
+     width: 10rem;
+     @media screen and (min-width:700px){
+          width: 15rem;
+     }
+     @media screen and (min-width:1024px){
+          width: 18rem;
+     }
+`;
+
+export const PokeballWrapper = styled.div`
+     width:3rem;
      background-color: white;
      display: flex;
      justify-content: center;
      border-radius:50%;
-     flex-grow:0;
+     
+     @media screen and (min-width:700px){
+          width: 4rem;
+     }
+     
 `;
 
 export const CartWrapper = styled.div`
@@ -39,20 +53,16 @@ export const CartWrapper = styled.div`
      position:relative;
      background-color: white;
      border-radius: 50%;
-     height: 2.5rem;
-     width: 2.5rem;
+     height: 3rem;
+     width: 3rem;
      align-items: center;
      flex-grow:0;
 
-     @media screen and (min-width: 500px) {
-          width:3rem;
-          height:3rem;
+     @media screen and (min-width: 700px) {
+          width:4rem;
+          height:4rem;
      }
 
-     @media screen and (min-width: 1024px) {
-          width:4rem;
-          height: 4rem;
-     }
 `;
 
 
@@ -70,22 +80,5 @@ export const PurchaseConfirm = styled.div`
      }
 `;
 
-export const H1 = styled.h1`
 
-     font-family:'Pokemon-Solid';
-     font-size: 2.5rem;
-     color: #ffcc00;
-     -webkit-text-stroke: 3px #0f417d;
-     
-     flex-grow:0;
-     @media screen and (min-width: 500px) {
-          font-size:4rem;
-     }
-
-     @media screen and (min-width: 1024px) {
-          
-          font-size: 4rem;
-     }
-
-`;
 

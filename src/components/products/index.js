@@ -75,7 +75,7 @@ function Products({ items, itemsPerSlide, value }) {
                     
                     setShow({
                          state:true,
-                         msg:"Already bought",
+                         msg:"Already in cart",
                     })
                }
                
@@ -114,7 +114,7 @@ function Products({ items, itemsPerSlide, value }) {
                                              </ImageWrapper>
                                              <DataContainer>
                                                   <P>{item.title}</P>
-                                                  <P>{`Precio: $ ${item.price}`}</P>
+                                                  <P>{`$ ${item.price}`}</P>
                                                   <BuyButton onClick={()=>buyItems( item.title, item.price, item.stock)} >Buy Now</BuyButton>
                                              </DataContainer>
 
