@@ -50,8 +50,8 @@ function MainPurchase() {
           if(total > 0) {
                setShow({
                     state:true,
-                    msg:`Thanks for your purchase :D`,
-                    msgAmount: `The total is: $${total}`
+                    msg:`Thank you for choosing PokeShop`,
+                    msgAmount: `Your bag total is: $${total}`
                })
                setItemsBuy((prevState)=> prevState.filter((element)=>typeof element !== "object")) 
           }
