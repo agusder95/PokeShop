@@ -27,5 +27,4 @@ Starts on `http://localhost:3000`
 * Styled Components
 * Node sass
 * Axios
-* Material UI
-* Redux
+* Fontawesome icons
